@@ -3,7 +3,7 @@ A two-tier VPC with a public web server, an isolated private server,
 and a serverless uptime monitor. Built by hand in the AWS console.
 
 ## Architecture
-![Resource map](wd-vpc_resource_map.png)
+![Resource map](https://github.com/HBtheTHIRD/aws-vpc-watchdog/blob/main/wd_watchdog_screenshots/wd-vpc_resource_map.png)
 
 ## What I built
 - Custom VPC (10.0.0.0/16), 4 subnets across 2 AZs, IGW, public and private route tables
