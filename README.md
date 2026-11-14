@@ -137,7 +137,7 @@ I broke the environment three ways and used the watchdog Lambda to record how ea
 
 ## Additional
 
-![Incident report](wd_incident_report)
+![Incident report](https://github.com/HBtheTHIRD/aws-vpc-watchdog/blob/main/wd_watchdog_screenshots/wd_incident_report.png)
 
 
 
