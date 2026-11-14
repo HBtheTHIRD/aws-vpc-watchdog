@@ -17,9 +17,9 @@ and a serverless uptime monitor. Built by hand in the AWS console.
 - Security-group referencing instead of IP rules for east-west traffic
 
 ## Failure testing
-Test 1: Stopped Apache
+### Test 1: Stopped Apache
 
-Break it: sudo systemctl stop httpd
+#### Break it: sudo systemctl stop httpd
 
 {
   "check": "DOWN",
@@ -29,7 +29,7 @@ Break it: sudo systemctl stop httpd
   "detail": "<urlopen error [Errno 111] Connection refused>"
 }
 
-Fix it: sudo systemctl start httpd
+#### Fix it: sudo systemctl start httpd
 
 {
   "check": "UP",
@@ -39,9 +39,9 @@ Fix it: sudo systemctl start httpd
   "detail": "OK"
 }
 
-Test 2: Remove Security Group Rule
+### Test 2: Remove Security Group Rule
 
-Break it: Delete rule (ec2 security group) -- HTTP/80/0.0.0.0/0
+#### Break it: Delete rule (ec2 security group) -- HTTP/80/0.0.0.0/0
 
 {
   "check": "DOWN",
@@ -51,7 +51,7 @@ Break it: Delete rule (ec2 security group) -- HTTP/80/0.0.0.0/0
   "detail": "<urlopen error timed out>"
 }
 
-Fix it: Add rule (ec2 security group) -- HTTP/80/0.0.0.0/0
+#### Fix it: Add rule (ec2 security group) -- HTTP/80/0.0.0.0/0
 
 {
   "check": "UP",
@@ -61,9 +61,9 @@ Fix it: Add rule (ec2 security group) -- HTTP/80/0.0.0.0/0
   "detail": "OK"
 }
 
-Step 3: Broke Route Table; Cut the Route to the Internet
+### Test 3: Broke Route Table; Cut the Route to the Internet
 
-Break it: Move wd-public-a route table off the public one
+#### Break it: Move wd-public-a route table off the public one
 
 {
   "check": "DOWN",
@@ -73,7 +73,7 @@ Break it: Move wd-public-a route table off the public one
   "detail": "<urlopen error timed out>"
 }
 
-Fix it: Move wd-public-a route table back to public
+#### Fix it: Move wd-public-a route table back to public
 
 {
   "check": "UP",
