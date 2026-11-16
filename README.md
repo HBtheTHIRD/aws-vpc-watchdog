@@ -135,7 +135,9 @@ I broke the environment three ways and used the watchdog Lambda to record how ea
 ```
 </details>
 
-## Additional
+### Incident evidence
+
+Every DOWN event, pulled from CloudWatch Logs Insights by filtering the Lambda's structured JSON logs:
 
 ![Incident report](https://github.com/HBtheTHIRD/aws-vpc-watchdog/blob/main/wd_watchdog_screenshots/wd_incident_report.png)
 
