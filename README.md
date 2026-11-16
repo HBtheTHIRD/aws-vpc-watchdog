@@ -1,6 +1,6 @@
 # AWS VPC Watchdog
 A two-tier VPC with a public web server, an isolated private server,
-and a serverless uptime monitor. Built by hand in the AWS console.
+and a serverless uptime monitor. Built by hand in the AWS console. A serverless synthetic monitor that gets called every 5 minutes to check the status of a web server; it's activity is logged in CloudWatch.
 
 ## Architecture
 ![Resource map](https://github.com/HBtheTHIRD/aws-vpc-watchdog/blob/main/wd_watchdog_screenshots/wd-vpc_resource_map.png)
